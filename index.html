@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HR Tracker App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>📋 HR Contact Tracker</h1>
+
+<!-- FORM -->
+<form id="hrForm">
+  <input type="hidden" id="editIndex">
+
+  <input type="text" id="hrName" placeholder="HR Name" required>
+  <input type="text" id="companyName" placeholder="Company Name" required>
+  <input type="text" id="role" placeholder="Role Description" required>
+  <input type="email" id="email" placeholder="HR Email" required>
+  <input type="tel" id="phone" placeholder="Phone Number" required>
+
+  <button type="submit">💾 Save HR Data</button>
+</form>
+
+<p id="status"></p>
+
+<!-- SEARCH -->
+<input type="text" id="searchInput" placeholder="🔍 Search by HR / Company / Role">
+
+<!-- TABLE -->
+<table>
+  <thead>
+    <tr>
+      <th>HR</th>
+      <th>Company</th>
+      <th>Role</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
